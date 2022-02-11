@@ -14,7 +14,7 @@ class CitySelectCustomHeaderRoute extends StatefulWidget {
 
 class _CitySelectCustomHeaderRouteState
     extends State<CitySelectCustomHeaderRoute> {
-  List<CityInfo> _cityList = List();
+  List<CityInfo> _cityList = List.empty(growable: true);
 
   int _suspensionHeight = 40;
   int _itemHeight = 50;

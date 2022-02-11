@@ -13,8 +13,8 @@ class CitySelectRoute extends StatefulWidget {
 }
 
 class _CitySelectRouteState extends State<CitySelectRoute> {
-  List<CityInfo> _cityList = List();
-  List<CityInfo> _hotCityList = List();
+  List<CityInfo> _cityList = List.empty(growable: true);
+  List<CityInfo> _hotCityList = List.empty(growable: true);
 
   int _suspensionHeight = 40;
   int _itemHeight = 50;

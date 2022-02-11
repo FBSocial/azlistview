@@ -13,8 +13,8 @@ class IndexSuspensionRoute extends StatefulWidget {
 }
 
 class _IndexSuspensionRouteState extends State<IndexSuspensionRoute> {
-  List<CityInfo> _cityList = List();
-  List<String> _indexTagList = List();
+  List<CityInfo> _cityList = List.empty(growable: true);
+  List<String> _indexTagList = List.empty(growable: true);
   Map<String, int> _suspensionSectionMap = Map();
   ScrollController _scrollController;
   int _suspensionHeight = 40;
@@ -54,7 +54,7 @@ class _IndexSuspensionRouteState extends State<IndexSuspensionRoute> {
   }
 
   void _addHotCityList() {
-    List<CityInfo> hotCityList = List();
+    List<CityInfo> hotCityList = List.empty(growable: true);
     hotCityList.add(CityInfo(name: "北京市", tagIndex: "★"));
     hotCityList.add(CityInfo(name: "广州市", tagIndex: "★"));
     hotCityList.add(CityInfo(name: "成都市", tagIndex: "★"));

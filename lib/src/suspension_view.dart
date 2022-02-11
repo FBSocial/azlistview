@@ -54,7 +54,7 @@ class _SuspensionWidgetState extends State<SuspensionView> {
   int? _lastIndex;
   late int _suSectionListLength;
 
-  List<int> _suspensionSectionList = List.empty();
+  List<int> _suspensionSectionList = List.empty(growable: true);
   Map<String, int> _suspensionSectionMap = Map();
 
   @override

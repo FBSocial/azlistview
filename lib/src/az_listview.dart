@@ -93,8 +93,8 @@ class AzListView extends StatefulWidget {
 
 class _AzListViewState extends State<AzListView> {
   Map<String, int> _suspensionSectionMap = Map();
-  List<ISuspensionBean> _cityList = List<ISuspensionBean>.empty();
-  List<String> _indexTagList = List<String>.empty();
+  List<ISuspensionBean> _cityList = List<ISuspensionBean>.empty(growable: true);
+  List<String> _indexTagList = List<String>.empty(growable: true);
   bool? _isShowIndexBarHint = false;
   String? _indexBarHint = "";
 
