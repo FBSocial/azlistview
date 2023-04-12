@@ -145,6 +145,19 @@ class _AzListViewState extends State<AzListView> {
   void _scrollTopIndex(String tag) {
     int index = _getIndex(tag);
     if (index != -1) {
+      final cards = itemPositionsListener.itemPositions.value.toList();
+      if (cards.isNotEmpty) {
+        final showCards = cards.where((element) =>
+            element.itemTrailingEdge > 0 && element.itemTrailingEdge < 1);
+        bool has = false;
+        for (ItemPosition i in showCards) {
+          if (i.index == index) {
+            has = true;
+            break;
+          }
+        }
+        if (has && widget.itemCount - index < showCards.length) return;
+      }
       itemScrollController.jumpTo(index: index);
     }
   }
